@@ -35,14 +35,23 @@ def quite_click():
 	return
 
 
+
+
+
+
+
+
+
 def AppMain():
 	global main_window
 	main_window = TkControls.WindowNew('Tk Test App', resize = True)
 	main_frame = TkLayouts.FrameNew(main_window, 'Main Frame', column=0, row= 0, padding= 20)
 
+	#Add read only lable to a frame.
 	global my_lable
 	my_lable = TkControls.LableNew(main_frame, "A Label", column=0, row=0)
 
+	# Add editable text box to a frame.
 	global my_text_var
 	global my_text_box
 	my_text_box, my_text_var = TkControls.TextBoxNew(main_frame, column=0, row=1, width=20)
@@ -59,10 +68,8 @@ def AppMain():
 
 	global check1, chVarDis
 	check1, chVarDis = TkControls.CheckBoxNew(main_frame, 'Disabled', False, True, column=0, row=4)
-
 	global check2, chVarUn
 	check2, chVarUn = TkControls.CheckBoxNew(main_frame, 'UnChecked', True, False, column=1, row=4)
-
 	global check3, chVarEn
 	check3, chVarEn  = TkControls.CheckBoxNew(main_frame, 'Enabled', True, True, column=2, row=4)
 
@@ -91,9 +98,6 @@ def AppMain():
 	tab2 = TkLayouts.TabControlAdd(tabControl,'Tab1')
 	mighty = TkLayouts.FrameNew(tab1, text=' Mighty Python ', column=0, row=0, padding=8)
 	a_label = TkControls.LableNew(mighty, text="Enter a name:", column=0, row=0)
-
-
-
 
 	main_frame.mainloop()
 
