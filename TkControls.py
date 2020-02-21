@@ -9,7 +9,7 @@ from tkinter import ttk
 #Open application main window blocking.
 def WindowNew(title:str, resize:bool)->Tk:
 	win = Tk()
-	win.title("Welcome to LikeGeeks app")
+	win.title(title)
 	win.resizable(resize, resize)
 	return(win)
 
@@ -52,11 +52,12 @@ def ButtonText(button:ttk.Button, text:str, color:str)->bool:
 	button.configure(foreground=color)
 
 #Add new text-box to container.
-def TextBoxNew(win:Tk, column:int, row:int, width:int)->(ttk.Entry, tk.StringVar):
+def TextBoxNew(win:Tk, column:int, row:int, columnspan= 1)->(ttk.Entry, tk.StringVar):
 	# Adding a Text box Entry widget
 	text_var:tk.StringVar =  tk.StringVar()
-	text_box:ttk.Entry = ttk.Entry(win, width=width, textvariable=text_var)
-	text_box.grid(column=column, row=row)
+	text_box:ttk.Entry = ttk.Entry(win, textvariable=text_var)
+	if(columnspan):	text_box.grid(column=column, row=row, columnspan=columnspan)
+	else:   text_box.grid(column=column, row=row, sticky=W+E)
 	return(text_box, text_var)
 
 #Set txt-box text.
@@ -102,9 +103,12 @@ def RadioValue(radio_var: tk.StringVar) -> int:
 
 # Add new scrolled Text control to container.
 from tkinter import scrolledtext
-def TextScrollAdd(win:Tk, scrol_w:int, scrol_h:int, column:int, columnspan:int)->scrolledtext:
-	scroll = scrolledtext.ScrolledText(win, width=scrol_w, height=scrol_h, wrap=tk.WORD)
-	scroll.grid(column=column, columnspan=columnspan)
+def TextScrollAdd(win:Tk, scrol_h:int, column:int, row:int, columnspan:int=1)->scrolledtext:
+	scroll = scrolledtext.ScrolledText(win, height=scrol_h, wrap=tk.WORD)
+	if(columnspan):
+		scroll.grid(column=column, row=row, columnspan=columnspan)
+	else:
+		scroll.grid(column=column, row=row, sticky=E+W)
 	return(scroll)
 
 #Get text from Scroll text.

@@ -43,7 +43,7 @@ def MenuSubAdd(sub_menu:Menu, text:str, sep:bool, command):
 def FrameNew(container:ttk.Widget, text:str, column:int, row:int, padding:int)->ttk.LabelFrame:
 	# Create a container to hold labels
 	frame = ttk.LabelFrame(container, text=text)
-	frame.grid(column=column, padx=padding  , row=row, pady=padding)
+	frame.grid(column=column, padx=padding  , row=row, pady=padding, sticky=E+W)
 	return(frame)
 
 
