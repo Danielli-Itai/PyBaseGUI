@@ -122,7 +122,8 @@ def plot_confusion_matrix(actual_cls:list, predict_cls:list, classes:list, norma
 	conf_mat = confusion_matrix(actual_cls, predict_cls)
 
 	# Only use the labels that appear in the data
-	print("data classes"  +unique_labels(actual_cls, predict_cls))
+	dada_classes =  unique_labels(actual_cls, predict_cls)
+	print("data classes"  + str(dada_classes))
 
 	if normalize:
 		conf_mat = conf_mat.astype('float') / conf_mat.sum(axis=1)[:, np.newaxis]
