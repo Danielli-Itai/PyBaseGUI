@@ -52,7 +52,18 @@ def ButtonText(button:ttk.Button, text:str, color:str)->bool:
 	button.configure(foreground=color)
 
 #Add new text-box to container.
-def TextBoxNew(win:Tk, column:int, row:int, columnspan= 1)->(ttk.Entry, tk.StringVar):
+def TextBoxNew(win:Tk, text:str, column:int, row:int, columnspan = 1)->(ttk.Entry, tk.StringVar):
+	# Adding a Text box Entry widget
+	text_box:tk.Text = tk.Text(win)
+	if(columnspan):
+		text_box.grid(column=column, row=row, columnspan=columnspan)
+	else:
+		text_box.grid(column=column, row=row, sticky=W+E)
+		text_box.insert('1.0', text)
+	return(text_box)
+
+#Add new text-box to container.
+def TextEntryNew(win:Tk, column:int, row:int, columnspan= 1)->(ttk.Entry, tk.StringVar):
 	# Adding a Text box Entry widget
 	text_var:tk.StringVar =  tk.StringVar()
 	text_box:ttk.Entry = ttk.Entry(win, textvariable=text_var)
