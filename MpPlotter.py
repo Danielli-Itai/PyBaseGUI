@@ -6,10 +6,13 @@
 # License: MIT 2014 Kevin Peterson
 ##############################################################
 #from BasePy.Config import ConfigCls
-import MySQLdb
+import MySQLdb			#import mysql for this library.
 from pylab import *
 import matplotlib.pyplot as plt
 import numpy
+
+sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
+from PyBase.Config import ConfigCls
 
 
 

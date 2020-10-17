@@ -1,6 +1,8 @@
+import os
+import sys
 import numpy as np
 import Mplot
-
+sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
 
 
 

@@ -1,8 +1,10 @@
 #This module provides an interface to GUI containers.
+import os
 from tkinter import *
 from tkinter import ttk
-
 from tkinter import Menu
+
+sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
 
 
 

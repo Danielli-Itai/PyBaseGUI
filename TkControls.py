@@ -1,6 +1,9 @@
+import os
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
+
+sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
 
 
 

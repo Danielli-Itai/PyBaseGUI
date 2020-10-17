@@ -1,8 +1,14 @@
 #Matplot library simple interface functions.
 #Check out another optional library:https://seaborn.pydata.org/index.html
+import os
+import sys
 from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import matplotlib.pyplot as plt
+
+sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
+
+
 
 
 

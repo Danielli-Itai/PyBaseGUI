@@ -1,6 +1,13 @@
-import TkBase
-import TkControls
-import TkLayouts
+import os
+import sys
+
+from PyBaseGUI import TkBase
+from PyBaseGUI import TkControls
+from PyBaseGUI import TkLayouts
+
+sys.path.append(os.path.join(os.getcwd(),'../'))
+
+
 
 
 
