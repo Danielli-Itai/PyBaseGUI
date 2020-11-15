@@ -2,7 +2,8 @@ import os
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
-
+from tkhtmlview import HTMLLabel
+from tkhtmlview import HTMLText
 sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
 
 
@@ -30,16 +31,27 @@ def CtrlEnable(control:Widget, state:bool)->bool:
 	return(True)
 
 
-# Add new lable to GUI container.
+# Add new label to GUI container.
 def LableNew(win:Tk, text:str, column:int, row:int)->ttk.Label:
 	lable = ttk.Label(win, text=text)
-	lable.grid(column=column, row=row, sticky='W')
+	lable.grid(column=column, row=row, sticky=N+S+W+E)
 	return(lable)
+
+def LableNewHtml(win:Tk, html_text:str, column:int, row:int,width:int)->HTMLLabel:
+	lable_html = HTMLLabel(win, html=html_text, width=width)
+	lable_html.grid(column=column, row=row)
+	return(lable_html)
+
+def TextNewHtml(win:Tk, html_text:str, column:int, row:int,width:int):
+	text_html = HTMLText(win, html=html_text, width=width)
+	text_html.grid(column=column, row=row)
+	return(text_html)
 
 #Set lable text.
 def LableText(lable:ttk.Label, text:str, color='black')->bool:
 	lable.configure(text=text, foreground = color)
 	return(True)
+
 
 
 # Add new button to GUI container.
@@ -55,15 +67,16 @@ def ButtonText(button:ttk.Button, text:str, color:str)->bool:
 	button.configure(foreground=color)
 
 #Add new text-box to container.
-def TextBoxNew(win:Tk, text:str, column:int, row:int, columnspan = 0)->(ttk.Entry, tk.StringVar):
+def TextBoxNew(win:Tk, text:str, column:int, row:int, columnspan = 0, width:int=40)->(ttk.Entry, tk.StringVar):
 	# Adding a Text box Entry widget
-	text_box:tk.Text = tk.Text(win)
+	text_box:tk.Text = tk.Text(win, width=width)
 	if(columnspan):
 		text_box.grid(column=column, row=row, columnspan=columnspan)
 	else:
 		text_box.grid(column=column, row=row, sticky=N+S+W+E)
 		text_box.insert('1.0', text)
 	return(text_box)
+
 
 #Add new text-box to container.
 def TextEntryNew(win:Tk, column:int, row:int, width, columnspan= 1)->(ttk.Entry, tk.StringVar):
