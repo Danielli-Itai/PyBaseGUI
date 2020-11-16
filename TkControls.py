@@ -2,6 +2,7 @@ import os
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
+from tkinter import font
 from tkhtmlview import HTMLLabel
 from tkhtmlview import HTMLText
 sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
@@ -56,6 +57,7 @@ def LableText(lable:ttk.Label, text:str, color='black')->bool:
 
 # Add new button to GUI container.
 def ButtonNew(win:Tk, lable:str, clic_func, column:int, row:int)->ttk.Button:
+
 	# Adding a Button
 	button = ttk.Button(win, text=lable, command=clic_func)
 	button.grid(column=column, row=row)
