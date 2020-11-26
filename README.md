@@ -8,3 +8,9 @@ and the extent of its tutorial and user support guides.
 
 Reference documentation:
 https://pythonspot.com/pyqt5
+
+
+## Version freeze
+Creating requirements file:
+Open project folder in terminal and run the command
+    pip3 freeze > requirements.txt
