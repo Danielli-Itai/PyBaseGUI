@@ -2,14 +2,21 @@ import os
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
-from tkinter import font
 from tkhtmlview import HTMLLabel
 from tkhtmlview import HTMLText
-sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
+
+# Set project include path.
+sys.path.append(os.path.join(os.getcwd(),'../'))
 
 
 
 
+
+######################################################################
+#                                                                    #
+#					Tk Interface GUI controls API 					 #
+#                                                                    #
+######################################################################
 
 #Open application main window blocking.
 def WindowNew(title:str, resize:bool)->Tk:

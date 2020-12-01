@@ -1,22 +1,29 @@
-##############################################################
-# MpPlotter.py
-#
-# A helper class for creating PieCharts, Scatterplots, and Histographs.
-#
-# License: MIT 2014 Kevin Peterson
-##############################################################
+######################################################################
+#																	 #
+#						Mat Plotter Class						 	 #
+#																	 #
+######################################################################
 #from BasePy.Config import ConfigCls
 import MySQLdb			#import mysql for this library.
 from pylab import *
 import matplotlib.pyplot as plt
 import numpy
 
-sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
+# Set project include path.
+sys.path.append(os.path.join(os.getcwd(),'../'))
+
+# Include project paths.
 from PyBase.Config import ConfigCls
 
 
 
 
+
+######################################################################
+#                                                                    #
+#							Pie Chart								 #
+#                                                                    #
+######################################################################
 
 # Pie Chart Statistical graphics
 class PieChart:
@@ -64,6 +71,13 @@ class PieChart:
 
 
 
+
+
+######################################################################
+#                                                                    #
+#						Scatter Plot								 #
+#                                                                    #
+######################################################################
 
 # Scatter Plot  Statistical graphics
 class ScatterPlot:
@@ -121,6 +135,13 @@ class ScatterPlot:
 
 
 
+
+######################################################################
+#                                                                    #
+#							Histogram								 #
+#                                                                    #
+######################################################################
+
 # Histograph Statistical graphics
 class Histograph:
 	#Constractor
@@ -143,7 +164,7 @@ class Histograph:
 		x = []
 		# Storged  mysql database cursor result in an array
 		for record in result:
-		  x.append(record[0])
+			x.append(record[0])
 
 		# Create new  presentation figure
 		fig = plt.figure() 

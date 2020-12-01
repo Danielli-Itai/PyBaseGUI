@@ -6,11 +6,18 @@ from matplotlib import cm
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 import matplotlib.pyplot as plt
 
-sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
+# Set project include path.
+sys.path.append(os.path.join(os.getcwd(),'../'))
 
 
 
 
+
+######################################################################
+#																	 #
+#					Plot API functions Class						 #
+#																	 #
+######################################################################
 
 #Create a new plot.
 def _MpPlot(title:str)->plt.figure:

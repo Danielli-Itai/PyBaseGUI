@@ -2,9 +2,19 @@ import os
 import sys
 import numpy as np
 import Mplot
-sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
+
+# Set project include path.
+sys.path.append(os.path.join(os.getcwd(),'../'))
 
 
+
+
+
+######################################################################
+#                                                                    #
+#							Main function							 #
+#                                                                    #
+######################################################################
 
 if __name__ == '__main__':
 	Mplot.Mp2dDLine('some numbers','x axis','y axis', 'log', [1, 2, 3, 4], [1, 4, 9, 16])

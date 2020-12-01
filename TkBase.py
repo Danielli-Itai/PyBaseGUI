@@ -1,11 +1,18 @@
 import os
 from tkinter import *
 
-sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
+# Set project include path.
+sys.path.append(os.path.join(os.getcwd(),'../'))
 
 
 
 
+
+######################################################################
+#                                                                    #
+#							Tk Quit 								 #
+#                                                                    #
+######################################################################
 
 # Exit GUI cleanly.
 def _quit(win:Tk):

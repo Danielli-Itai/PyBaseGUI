@@ -4,11 +4,18 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import Menu
 
-sys.path.append(os.path.join(os.getcwd(),'../PyBase'))
+# Set project include path.
+sys.path.append(os.path.join(os.getcwd(),'../'))
 
 
 
 
+
+######################################################################
+#                                                                    #
+#							Tk GUI Layouts 							 #
+#                                                                    #
+######################################################################
 
 ##################################
 #        Window menu-bar

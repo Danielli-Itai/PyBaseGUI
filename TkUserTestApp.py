@@ -5,11 +5,18 @@ from PyBaseGUI import TkBase
 from PyBaseGUI import TkControls
 from PyBaseGUI import TkLayouts
 
+# Set project include path.
 sys.path.append(os.path.join(os.getcwd(),'../'))
 
 
 
 
+
+######################################################################
+#                                                                    #
+#							Tk GUI Test								 #
+#                                                                    #
+######################################################################
 
 def button_click():
 	global my_lable

@@ -17,6 +17,16 @@ from tkinterhtml import HtmlFrame
 from tkhtmlview import HTMLLabel
 import tkinter as tk
 
+import os
+import sys
+
+# Set project include path.
+sys.path.append(os.path.join(os.getcwd(),'../'))
+
+
+
+
+
 root = tk.Tk()
 
 #frame = HtmlFrame(root, horizontal_scrollbar="auto")
