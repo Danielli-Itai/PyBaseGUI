@@ -2,8 +2,8 @@ import os
 from tkinter import *
 import tkinter as tk
 from tkinter import ttk
-from tkhtmlview import HTMLLabel
-from tkhtmlview import HTMLText
+from tk_html_widgets import HTMLLabel
+from tk_html_widgets import HTMLText
 
 # Set project include path.
 sys.path.append(os.path.join(os.getcwd(),'../'))

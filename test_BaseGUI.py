@@ -13,8 +13,7 @@ win.show_all()
 gtk.main()
 """
 import urllib.request
-from tkinterhtml import HtmlFrame
-from tkhtmlview import HTMLLabel
+from tk_html_widgets import HTMLLabel
 import tkinter as tk
 
 import os
