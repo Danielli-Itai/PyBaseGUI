@@ -1,4 +1,5 @@
 #This module provides an interface to GUI containers.
+import sys
 import os
 from tkinter import *
 from tkinter import ttk

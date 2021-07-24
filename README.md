@@ -9,6 +9,11 @@ and the extent of its tutorial and user support guides.
 Reference documentation:
 https://pythonspot.com/pyqt5
 
+## Required installations.
+    python -m pip install -U pip
+    python -m pip install pyqt5
+    python -m pip install -U matplotlib
+    python -m pip install tk-html-widgets
 
 ## Version freeze
 Creating requirements file:
